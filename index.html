@@ -75,8 +75,9 @@
   .detail .value{font-family:'Marcellus',serif;font-size:clamp(19px,5vw,25px);letter-spacing:.04em;color:#fff;}
   .detail .value small{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--mist);letter-spacing:.02em;margin-top:2px;}
 
+  /* CLICK button */
   .click{
-    display:inline-flex;align-items:center;gap:12px;margin-top:30px;
+    display:inline-flex;align-items:center;gap:12px;margin-top:30px;text-decoration:none;
     padding:15px 40px;border-radius:50px;
     font-family:'Cinzel',serif;font-weight:600;font-size:17px;letter-spacing:.34em;
     text-transform:uppercase;color:#1a1305;
@@ -96,10 +97,20 @@
   .rsvpnote .rt{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
   .rsvpnote .rd{font-family:'Marcellus',serif;font-size:17px;letter-spacing:.04em;color:#fff;}
   .rsvpnote .rw{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--mist);margin-top:4px;}
+  .rsvpbtn{
+    display:inline-flex;align-items:center;gap:9px;margin-top:14px;
+    padding:12px 30px;border-radius:50px;text-decoration:none;
+    font-family:'Cinzel',serif;font-weight:600;font-size:14px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--gold-bright);
+    border:1px solid rgba(217,180,110,.6);
+    background:linear-gradient(180deg,rgba(217,180,110,.16),rgba(217,180,110,.04));
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .rsvpbtn:hover{transform:translateY(-2px);box-shadow:0 8px 22px -6px rgba(241,215,155,.6);}
 </style>
 </head>
 <body>
-  <a class="cardlink" href="invite.html">
+  <div class="cardlink">
     <div class="card">
       <div class="stars" id="stars"></div>
       <svg class="skyline" viewBox="0 0 560 120" preserveAspectRatio="none" aria-hidden="true">
@@ -133,16 +144,17 @@
             <div class="value">Perch LA<small>448 S Hill St · Downtown Los Angeles</small></div>
           </div>
         </div>
-        <div class="click">Click</div>
-        <p class="taphint">Tap to open your invitation</p>
+        <a class="click" href="invite.html">Click</a>
+        <p class="taphint">Tap to open the full invitation</p>
         <div class="rsvpnote">
           <div class="rt">Kindly RSVP</div>
           <div class="rd">By Monday, June 8 · 3:00 PM</div>
-          <div class="rw">Reply right here in the group chat so we can reserve your seat for dinner</div>
+          <div class="rw">Reply in the group chat, or text your RSVP</div>
+          <a class="rsvpbtn" href="sms:+18184543879?&body=Hi! RSVPing for Anisha's Birthday Bash - count me in! 🎉">✉ RSVP by Text</a>
         </div>
       </div>
     </div>
-  </a>
+  </div>
 
   <script>
     const wrap=document.getElementById('stars');
